@@ -16,7 +16,7 @@ let products = {
       productName: "Sporty SmartWatch",
       category: "Watch",
       price: "99",
-      image: "sporty-smartwatch. jpg",
+      image: "sporty-smartwatch.jpg",
     },
     {
       productName: "Basic Knitted Top",
@@ -38,7 +38,7 @@ for (let i of products.data) {
   //Create card
   let card = document.createElement("div");
   //Adding category and classs and stay hidden initiallyy
-  card.classList.add("card", "i.category", "hide");
+  card.classList.add("card", i.category, "hide");
 
   //img div
   let imgContainer = document.createElement("div");
@@ -63,7 +63,8 @@ for (let i of products.data) {
 
   let price = document.createElement("h6");
   price.innerText = i.price;
-  container.appendChild("€" + price);
+  container.appendChild(document.createTextNode("€" + price.innerText));
+  // container.appendChild("€" + price);
 
   card.appendChild(container);
 
