@@ -34,47 +34,38 @@ let products = {
   ],
 };
 
-for(let i of products.data) {
-//Create card
-    let card = document.createElement("div")
-//Adding category and classs
-card.classList.add("card", "i.category");
+for (let i of products.data) {
+  //Create card
+  let card = document.createElement("div");
+  //Adding category and classs
+  card.classList.add("card", "i.category");
 
-//img div 
-let imgContainer= document.createElement("div");
-imgContainer.classList.add("image-container");
+  //img div
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add("image-container");
 
-//img tag
+  //img tag
 
-let image= document.createElement("img");
-image.setAttribute("src",i.image);
-imgContainer.appendChild(image);
-card.appendChild(imgContainer);
-//container
-let container = document.createElement("div")
-container.classList.add("container")
-//product name 
-let name = document.creayeElement("h5");
-name.classList.add("product-name")
-name.innerText = i.productName.toUpperCase();
-container.appendChild(name);
+  let image = document.createElement("img");
+  image.setAttribute("src", i.image);
+  imgContainer.appendChild(image);
+  card.appendChild(imgContainer);
+  //container
+  let container = document.createElement("div");
+  container.classList.add("container");
+  //product name
+  let name = document.createElement("h5");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+  container.appendChild(name);
 
-//price
+  //price
 
-let price = document.createElement("h6")
-price.innerText =i.price;
-container.appendChild(""+ price);
+  let price = document.createElement("h6");
+  price.innerText = i.price;
+  container.appendChild("€" + price);
 
+  card.appendChild(container);
 
-
-card.appendChild(container);
-
-
-document.getElementById("products").appendChild(card);
-
-
-
-
-
-
+  document.getElementById("products").appendChild(card);
 }
