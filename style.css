@@ -42,7 +42,31 @@ body {
   cursor: pointer;
 }
 
-.active{
-    background-color: #6759ff;
-    color:#ffffff
+.active {
+  background-color: #6759ff;
+  color: #ffffff;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 18em;
+  margin: top 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+.image-container {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
 }
